@@ -1,7 +1,7 @@
 local HttpService, TPService = game:GetService"HttpService", game:GetService"TeleportService";
 local OtherServers = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
 for Index, Server in next, OtherServers["data"] do
-   if Server ~= game.JobId and Server.playing ~= Server.maxPlayers and Server.ping < 100 then
+   if Server ~= game.JobId and Server.playing ~= Server.maxPlayers and Server.ping < 58 then
        print(Server["id"])
        TPService:TeleportToPlaceInstance(game.PlaceId, Server["id"])
        break
