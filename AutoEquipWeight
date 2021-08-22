@@ -1,0 +1,21 @@
+
+EnableBackpackGui = false
+Weapon = "[HeavyWeights]"
+local player = game:GetService("Players").LocalPlayer
+local mouse = player:GetMouse();
+local char = player.Character
+local tool = player.Backpack:FindFirstChild(""..Weapon.."")
+db=1
+
+if char then
+
+for i,v in ipairs(char:GetChildren()) do
+if v.className ~= Weapon then
+wait()
+if db == 1 then
+player.Character.Humanoid:EquipTool(tool)
+db=2
+end
+end
+end
+end
