@@ -35,11 +35,11 @@ local tableinsert = table.insert
 
 -- // Silent Aim Vars
 getgenv().Fatality = {
-    Enabled = false,
-    ShowFOV = false,
+    Enabled = true,
+    ShowFOV = true,
     FOVColour = Color3fromRGB(192,192,192),
-    VisibleCheck = false,
-    FOV = 20,
+    VisibleCheck = true,
+    FOV = 60,
     HitChance = 100,
     Selected = LocalPlayer,
     SelectedPart = nil,
@@ -62,7 +62,7 @@ local Fatality = getgenv().Fatality
 -- // Show FOV
 local circle = Drawingnew("Circle")
 circle.Transparency = 1
-circle.Thickness = 2
+circle.Thickness = 1.5
 circle.Color = Fatality.FOVColour
 circle.Filled = false
 function Fatality.UpdateFOV()
