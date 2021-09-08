@@ -63,6 +63,7 @@ local Fatality = getgenv().Fatality
 local circle = Drawingnew("Circle")
 circle.Transparency = 1
 circle.Thickness = 1.5
+circle.NumSides = 24;
 circle.Color = Fatality.FOVColour
 circle.Filled = false
 function Fatality.UpdateFOV()
